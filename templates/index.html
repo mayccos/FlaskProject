@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>FlaskProject</title>
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <section class="home">
+        {% for person in persons %}
+            <h1>Informations de {{person['firstName']}} </h1>
+            <!-- {% for person in persons %} -->
+                <div class="form_container">
+                    <i class="uil uil-times form_close"></i>
+                    <!-- Message Form -->
+                    <div class="form message_form">
+                        <form id="infosForm" action="#">
+                            <h2>{{ person['firstName'] , person['lastName'] }}</h2>
+
+                            <div class="input_box">
+                                <input type="text" id="firstName" name="firstName" />
+                                <i class="uil uil-user text"></i>
+                            </div>
+
+                            <div class="input_box">
+                                <input type="text" id="lastName" name="lastName" />
+                                <i class="uil uil-user text"></i>
+                            </div>
+
+                            <div class="input_box">
+                                <input type="text" id="age" name="age" />
+                                <i class="uil uil-user text"></i>
+                            </div>
+
+                            <div class="input_box">
+                                <input type="email" id="email" name="email" />
+                                <i class="uil uil-envelope email"></i>
+                            </div>
+
+                            <div class="input_box">
+                                <input type="life" id="life" name="life" />
+                                <i class="uil uil-user text"></i>
+                            </div>
+
+                            <button class="button" name="send" onclick="submitForm()">Envoyé</button>
+                        </form>
+                    </div>
+                </div>
+        {% endfor %}
+    </section>
+{% endblock %}
+    
+
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

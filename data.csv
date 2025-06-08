@@ -1,0 +1,5 @@
+nom,prenom,age,mail,mort
+John,Doe,25,john.doe@example.com,dead
+Jane,Smith,36,jane.smith@example.com,alive
+Alice,Johnson,49,alice.johnson@example.com,alive
+Boris,Morton,18,boris.morton@example.com,dead
